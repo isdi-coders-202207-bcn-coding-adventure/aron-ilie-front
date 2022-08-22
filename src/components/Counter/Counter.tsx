@@ -2,28 +2,20 @@ const Counter = (): JSX.Element => {
   return (
     <ul>
       <li>
-        <div className="time-container">
-          <span id="days"></span>
-        </div>
+        <span className="days"></span>
         <span>days</span>
       </li>
       <li>
-        <div className="time-container">
-          <span id="hours"></span>
-          <span>hours</span>
-        </div>
+        <span className="hours"></span>
+        <span>hours</span>
       </li>
       <li>
-        <div className="time-container">
-          <span id="minutes"></span>
-          <span>minutes</span>
-        </div>
+        <span className="minutes"></span>
+        <span>minutes</span>
       </li>
       <li>
-        <div className="time-container">
-          <span id="seconds"></span>
-          <span>seconds</span>
-        </div>
+        <span className="seconds"></span>
+        <span>seconds</span>
       </li>
     </ul>
   );
