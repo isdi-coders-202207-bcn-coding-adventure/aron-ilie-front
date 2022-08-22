@@ -2,30 +2,30 @@ import CounterStyled from "./CounterStyled";
 
 const Counter = (): JSX.Element => {
   return (
-    <CounterStyled>
-      <li className="unit-counter-container">
-        <div className="counter-number-container">
-          <span className="counter-number">02</span>
+    <CounterStyled className="counter">
+      <li className="counter__unit-container">
+        <div className="counter__number-container">
+          <span className="counter__number">02</span>
         </div>
-        <span className="counter-letter">days</span>
+        <span className="counter__letter">days</span>
       </li>
-      <li className="unit-counter-container">
-        <div className="counter-number-container">
-          <span className="counter-number">20</span>
+      <li className="counter__unit-container">
+        <div className="counter__number-container">
+          <span className="counter__number">20</span>
         </div>
-        <span className="counter-letter">hours</span>
+        <span className="counter__letter">hours</span>
       </li>
-      <li className="unit-counter-container">
-        <div className="counter-number-container">
-          <span className="counter-number">34</span>
+      <li className="counter__unit-container">
+        <div className="counter__number-container">
+          <span className="counter__number">34</span>
         </div>
-        <span className="counter-letter">minutes</span>
+        <span className="counter__letter">minutes</span>
       </li>
-      <li className="unit-counter-container">
-        <div className="counter-number-container">
-          <span className="counter-number">09</span>
+      <li className="counter__unit-container">
+        <div className="counter__number-container">
+          <span className="counter__number">09</span>
         </div>
-        <span className="counter-letter">seconds</span>
+        <span className="counter__letter">seconds</span>
       </li>
     </CounterStyled>
   );
