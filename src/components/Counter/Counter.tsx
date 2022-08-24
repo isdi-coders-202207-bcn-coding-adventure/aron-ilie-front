@@ -2,18 +2,20 @@ import moment, { Moment } from "moment";
 import { useEffect, useState } from "react";
 import KeyDate from "../../utils/KeyDate";
 import CounterStyled from "./CounterStyled";
+import "moment/locale/pt-br";
 
 const Counter = (): JSX.Element => {
-  const [days, setDays] = useState(0);
-  const [hours, setHours] = useState(0);
-  const [minutes, setMinutes] = useState(0);
-  const [seconds, setSeconds] = useState(0);
+  const [days, setDays] = useState<string | number>(0);
+  const [hours, setHours] = useState<string | number>(0);
+  const [minutes, setMinutes] = useState<string | number>(0);
+  const [seconds, setSeconds] = useState<string | number>(0);
 
   useEffect(() => {
     setInterval(() => {
       const now: Moment = moment();
       const then: Moment = moment(KeyDate, "YYYY-MM-DD hh:mm:ss");
-      const countdown: any = moment((then as any) - (now as any));
+
+      const countdown: Moment = moment(+then - +now);
 
       setDays(countdown.format("D"));
       setHours(countdown.format("HH"));
