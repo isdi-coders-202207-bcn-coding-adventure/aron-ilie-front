@@ -10,10 +10,12 @@ const Counter = (): JSX.Element => {
   const [minutes, setMinutes] = useState<string | number>(0);
   const [seconds, setSeconds] = useState<string | number>(0);
 
+  const date = moment(KeyDate.toString());
+
   useEffect(() => {
     setInterval(() => {
       const now: Moment = moment();
-      const then: Moment = moment(KeyDate, "YYYY-MM-DD hh:mm:ss");
+      const then: Moment = moment(date, "YYYY-MM-DD hh:mm:ss");
 
       const countdown: Moment = moment(+then - +now);
 
