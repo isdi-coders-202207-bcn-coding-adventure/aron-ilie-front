@@ -5,7 +5,7 @@ import Counter from "./Counter";
 
 describe("Given a Counter component", () => {
   describe("When it is renderized", () => {
-    test("Then it should show the countdown numbers", () => {
+    test("Then it should show the countdown titles", () => {
       render(
         <Provider store={store}>
           <Counter />
@@ -21,6 +21,18 @@ describe("Given a Counter component", () => {
       expect(hours).toBeInTheDocument();
       expect(minutes).toBeInTheDocument();
       expect(seconds).toBeInTheDocument();
+    });
+
+    test("Then it should call the setInterval function", () => {
+      const setIntervalCall = jest.spyOn(global, "setInterval");
+
+      render(
+        <Provider store={store}>
+          <Counter />
+        </Provider>
+      );
+
+      expect(setIntervalCall).toHaveBeenCalled();
     });
   });
 });
