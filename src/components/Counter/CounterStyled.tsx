@@ -1,13 +1,20 @@
 import styled from "styled-components";
 
-const CounterStyled = styled.ul`
-  min-width: 50%;
+const CounterStyled = styled.div`
+  height: 100vh;
   display: flex;
-  flex-direction: row;
-  gap: 2em;
-  font-family: oxanium;
+  align-items: center;
+  justify-content: center;
 
   .counter {
+    min-width: 50%;
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    font-family: oxanium;
+    justify-content: center;
+    padding: 0;
+
     &__number-container {
       max-width: 50px;
       background-color: #fac204;

@@ -1,3 +1,5 @@
+import "./HeaderStyles.css";
+
 const Header = (): JSX.Element => {
   return (
     <header className="main-header">
