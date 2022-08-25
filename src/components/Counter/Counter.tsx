@@ -25,31 +25,33 @@ const Counter = (): JSX.Element => {
   }, []);
 
   return (
-    <CounterStyled className="counter">
-      <li className="counter__unit-container">
-        <div className="counter__number-container">
-          <span className="counter__number">{days}</span>
-        </div>
-        <span className="counter__letter">days</span>
-      </li>
-      <li className="counter__unit-container">
-        <div className="counter__number-container">
-          <span className="counter__number">{hours}</span>
-        </div>
-        <span className="counter__letter">hours</span>
-      </li>
-      <li className="counter__unit-container">
-        <div className="counter__number-container">
-          <span className="counter__number">{minutes}</span>
-        </div>
-        <span className="counter__letter">minutes</span>
-      </li>
-      <li className="counter__unit-container">
-        <div className="counter__number-container">
-          <span className="counter__number">{seconds}</span>
-        </div>
-        <span className="counter__letter">seconds</span>
-      </li>
+    <CounterStyled className="counter-container">
+      <ul className="counter">
+        <li className="counter__unit-container">
+          <div className="counter__number-container">
+            <span className="counter__number">{days}</span>
+          </div>
+          <span className="counter__letter">days</span>
+        </li>
+        <li className="counter__unit-container">
+          <div className="counter__number-container">
+            <span className="counter__number">{hours}</span>
+          </div>
+          <span className="counter__letter">hours</span>
+        </li>
+        <li className="counter__unit-container">
+          <div className="counter__number-container">
+            <span className="counter__number">{minutes}</span>
+          </div>
+          <span className="counter__letter">minutes</span>
+        </li>
+        <li className="counter__unit-container">
+          <div className="counter__number-container">
+            <span className="counter__number">{seconds}</span>
+          </div>
+          <span className="counter__letter">seconds</span>
+        </li>
+      </ul>
     </CounterStyled>
   );
 };
