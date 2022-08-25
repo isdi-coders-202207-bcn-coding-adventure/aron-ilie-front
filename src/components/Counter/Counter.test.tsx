@@ -22,22 +22,5 @@ describe("Given a Counter component", () => {
       expect(minutes).toBeInTheDocument();
       expect(seconds).toBeInTheDocument();
     });
-
-    jest.useFakeTimers();
-
-    test("Then it should show a different number value after 5 minutes", () => {
-      render(
-        <Provider store={store}>
-          <Counter />
-        </Provider>
-      );
-
-      const setInterval = jest.fn();
-
-      jest.advanceTimersByTime(1000);
-
-      expect(setInterval).toHaveBeenCalledTimes(0);
-      expect(setInterval).toHaveBeenLastCalledWith(expect.any(Function), 1000);
-    });
   });
 });
