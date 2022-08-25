@@ -1,4 +1,4 @@
-import "./Styles.css";
+import "./HeaderStyles.css";
 
 const Header = (): JSX.Element => {
   return (
